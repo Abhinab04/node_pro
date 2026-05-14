@@ -1,0 +1,156 @@
+/* General reset for consistent spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #1a252f;
+    color: white;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Container limits width and centers content */
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* Page headings */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+/* Elegant card layout for the schedule */
+.schedule-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    overflow: hidden; /* Keeps child borders within the rounded corners */
+}
+
+.hours-list {
+    list-style: none;
+}
+
+/* Styling for each day's row */
+.day-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #ecf0f1;
+    transition: background-color 0.3s ease;
+}
+
+.day-row:last-child {
+    border-bottom: none;
+}
+
+.day-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.time-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hours-time {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* ===== DYNAMIC HIGHLIGHT STYLING ===== */
+/* This class is added via EJS when dayId matches the current day */
+.highlight {
+    background-color: #ebf5fb;
+    border-left: 5px solid #3498db;
+}
+
+.highlight .day-name {
+    color: #2980b9;
+}
+
+.highlight .hours-time {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+/* Badge indicating "Open Today" */
+.badge {
+    background-color: #2ecc71;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(46, 204, 113, 0.3);
+}
+
+/* Responsive design adjustments for mobile devices */
+@media (max-width: 600px) {
+    .day-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .time-status {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

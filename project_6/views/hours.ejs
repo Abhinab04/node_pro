@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <!-- Link to the static CSS file served by Express middleware -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav>
+        <div class="logo">The Grand Feast</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <h1>Opening Hours</h1>
+        <p class="subtitle">Join us for delicious meals throughout the week!</p>
+        
+        <!-- Card layout container for the schedule -->
+        <div class="schedule-card">
+            <ul class="hours-list">
+                
+                <!-- Loop through the schedule array passed from index.js -->
+                <% schedule.forEach(function(day) { %>
+                    
+                    <!-- Dynamic Class: If the dayId equals currentDay, add 'highlight' CSS class -->
+                    <li class="day-row <%= day.dayId === currentDay ? 'highlight' : '' %>">
+                        
+                        <!-- Print the name of the day (e.g., Monday) -->
+                        <span class="day-name"><%= day.name %></span>
+                        
+                        <div class="time-status">
+                            <!-- Print the operating hours -->
+                            <span class="hours-time"><%= day.hours %></span>
+                            
+                            <!-- Dynamic Content: Show an 'Open Today' badge if this day matches today -->
+                            <% if (day.dayId === currentDay) { %>
+                                <span class="badge">Open Today</span>
+                            <% } %>
+                        </div>
+                        
+                    </li>
+                    
+                <% }); %>
+                
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

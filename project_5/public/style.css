@@ -1,0 +1,85 @@
+/* General reset for margin and padding to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Container for page content to keep it centered and readable */
+.container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Heading styles */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    color: #555;
+}
+
+/* Emphasize text styling */
+strong {
+    color: #e74c3c;
+}
