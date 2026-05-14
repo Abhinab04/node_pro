@@ -1,0 +1,13 @@
+{
+  "name": "project_9_task7",
+  "version": "1.0.0",
+  "description": "Configurable password hashing demo for assignment task 7",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "readline-sync": "^1.4.10"
+  }
+}
