@@ -1,0 +1,11 @@
+{
+  "name": "cli-input-validation-analysis",
+  "version": "1.0.0",
+  "description": "CLI Input Validation Analysis using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
